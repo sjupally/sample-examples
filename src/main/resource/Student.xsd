@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://localhost:7070/gaurav/springws/ContractFirstStudentService"
+	xmlns:tns="http://localhost:7070/gaurav/springws/ContractFirstStudentService"
+	elementFormDefault="qualified">
+
+	<element name="studentRequest">
+		<complexType>
+			<sequence>
+				<element name="id" type="string"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="studentResponse">
+		<complexType>
+			<sequence>
+				<element name="studentdetails" type="tns:studentdetails"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="studentdetails">
+		<sequence>
+			<element name="name" type="string"></element>
+			<element name="total" type="string"></element>
+			<element name="address" type="tns:address"></element>
+
+		</sequence>
+	</complexType>
+	<complexType name="address">
+		<sequence>
+
+			<element name="flatNo" type="string"></element>
+			<element name="street" type="string"></element>
+			<element name="city" type="string"></element>
+			<element name="state" type="string"></element>
+			<element name="pin" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
